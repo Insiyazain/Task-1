@@ -3,12 +3,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="{% static 'home/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    {% block extra_css %}{% endblock %}
+    <title>Library Management</title>
 </head>
 <body>
-    <h1>Welcome to My Django Website!</h1>
-    {% block content %}
-    
-    {% endblock %}
+    <header>
+      <h1>Welcome to My Django Website!</h1>
+      <nav>
+         <a href="/">Home</a>
+         <a href="/members/">Member</a>
+         <a href="/Loan/">Loan</a>
+      </nav>
+    </header>    
+    <hr>
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p class="bottom">&copy; 2024 Library Management</p>
+    </footer>
 </body>
 </html>

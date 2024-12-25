@@ -1,5 +1,18 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/index.css' %}">
+{% endblock %}
 
 {% block content %}
-<h1>This is  my homepage</h1>
+<h1>Books List</h1>
+
+<ul>
+  {% for book in books %}
+  <li>
+     <a href="/book/{{ book.id }}/">{{ book.title }}</a> by {{ book.author }}
+  </li>    
+  {% endfor %}
+</ul>    
 {% endblock %}
