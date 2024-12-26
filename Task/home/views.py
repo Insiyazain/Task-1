@@ -22,14 +22,17 @@ def loan_list(request):
     return render(request,'home/loan_list.html',{'loans':loans})
 
 def add_book(request):
-    if request.method=='post':
+    if request.method=='POST':
         form=Bookform(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request,"Book added successfully!")
             return redirect('home')
 
-    else:
-        form=Bookform()                         
+        else:
+           messages.error(request,"Failed to add book. Please check the form.")
+
+    else:       
+      form=Bookform()                         
     
     return render(request, 'home/add_book.html', {'form': form})
