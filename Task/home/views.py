@@ -2,6 +2,7 @@ from django.shortcuts import render,get_object_or_404,redirect
 from .models import Book,Loan,Member
 from .forms import Bookform,Memberform,Loanform
 from django.contrib import messages #for displaying success messages
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -36,3 +37,19 @@ def add_book(request):
       form=Bookform()                         
     
     return render(request, 'home/add_book.html', {'form': form})
+
+
+def search_books(request):
+    query=request.GET.get('q')
+    if query:
+      books=Book.objects.filter(title__icontains=query)
+    else:
+      books=Book.objects.all()
+    return render(request,'home/search_book.html', {'books':books})
+
+def book_list(request):
+   books=Book.objects.all()
+   paginator=Paginator(books,5)
+   page_number=request.GET.get('page')
+   page_obj=paginator.get_page(page_number)
+   return render(request,'home/book_list.html',{'page_obj':page_obj})

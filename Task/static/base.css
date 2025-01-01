@@ -1,78 +1,144 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Light background */
+    color:#34495e; /* Dark text for readability */
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
-/* Header Styles */
+/* Header Styling */
 header {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green background for header */
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
-    color:white;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between; /* Space out the navbar and search */
+    align-items: center; /* Vertically center */
+    padding: 10px 20px;
+    max-width: 1200px; /* Optional: Limit navbar width */
+    margin: 0 auto; /* Center the navbar */
     
 }
 
-nav {
-    margin: 10px 0;
+/* Navbar Links Styling */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    margin-left: 350px;
 }
 
-nav a {
+.navbar li {
+    margin-right: 30px; /* Space between the navbar items */
+    
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
     font-weight: bold;
+    font-size: 16px;
+    padding: 15px;
+    
 }
 
-nav a:hover {
+.navbar a:hover {
     text-decoration: underline;
+    color: #e3e3e3; /* Slightly lighter color on hover */
 }
 
-/* Content Area */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    justify-content: flex-end; /* Align the search bar to the right */ 
+    margin-right: -140px; /* Optional: Adds more space to the right */
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 200px;
+    font-size: 14px;
+    transition: all 0.3s ease; /* Smooth transition on focus */
 }
 
-/* Links */
-a {
-    color: #4CAF50;
-    text-decoration: none;
+.search-container input:focus {
+    outline: none;
+    border-color: #4CAF50; /* Highlight border on focus */
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Buttons */
-button {
-    background-color: #4CAF50;
+.search-container button {
+    padding: 10px 20px;
+    background-color:#34495e ;
     color: white;
-    border
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.search-container button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Container Styling for Book Details */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto; /* Centering the container */
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    color: #2c3e50; /* Dark color for title */
+    margin-bottom: 20px;
+}
+
+p strong {
+    font-weight: bold;
+    color: #34495e; /* Dark gray for strong text */
+}
+
+footer {
+    position: fixed; /* Makes the footer fixed */
+    bottom: 0; /* Sticks it to the bottom */
+    left: 0; /* Aligns it to the left edge */
+    width: 100%; /* Stretches it across the page */
+    background-color: #34495e; /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; /* Center-align text */
+    padding: 10px 0; /* Padding for breathing space */
+    font-size: 16px; /* Font size for readability */
+    z-index: 1000; /* Ensures it stays on top */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+

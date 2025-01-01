@@ -1,0 +1,38 @@
+
+
+/* Individual List Items */
+ul li {
+    padding: 15px 20px; /* Add spacing inside each list item */
+    border-bottom: 1px solid #ddd; /* Separate items with a border */
+    color: #34495e; /* Dark text for readability */
+    font-size: 16px; /* Adjust font size for readability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Last List Item: Remove Border */
+ul li:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+/* Hover Effect */
+ul li:hover {
+    background-color: #e3e3e3; /* Slightly darker background on hover */
+}
+
+/* No Books Found Styling */
+ul li.no-books {
+    text-align: center; /* Center align the message */
+    color: #888; /* Subtle gray for "no books" message */
+    font-style: italic; /* Italicize the text */
+}
+
+/* Highlight Titles and Authors */
+ul li span.title {
+    font-weight: bold; /* Make book title bold */
+    color: #2c3e50; /* Darker text for emphasis */
+}
+
+ul li span.author {
+    font-style: italic; /* Italicize the author */
+    color: #4CAF50; /* Add a greenish tint for authors */
+}

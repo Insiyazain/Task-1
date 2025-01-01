@@ -1,111 +1,123 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0; /* Reset padding for consistent layout */
-}
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
 
-header nav {
-    margin: 10px 0;
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-
+/* Heading Styling */
 h1 {
-    color:#004e64;
-    text-align: center;
-    margin-bottom: 10px;
+    color: #004e64; /* Dark teal color for heading */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+    font-size: 28px; /* Adjust font size for readability */
 }
 
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+/* Form Container Styling */
+.form_container {
+    max-width: 500px; /* Limit form width */
+    margin: 0 auto; /* Center the form on the page */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ddd; /* Subtle border for form */
+    border-radius: 8px; /* Rounded corners for modern look */
+    background-color: #ffffff; /* White background for form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Style for form fields */
-form p {
-    margin-bottom: 15px;
+/* Form Fields Styling */
+.form_container p {
+    margin-bottom: 15px; /* Space between form fields */
 }
 
-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
+.form_container label {
+    display: block; /* Labels on separate lines */
+    font-weight: bold; /* Bold labels for clarity */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #555; /* Neutral gray color for labels */
 }
 
-form input,
-form select,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
+.form_container input,
+.form_container select,
+.form_container textarea {
+    width: 100%; /* Full width fields */
+    padding: 10px; /* Add padding inside fields */
+    font-size: 16px; /* Consistent font size */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width */
+    margin-bottom: 15px; /* Space below fields */
 }
 
-/* Style for the submit button */
-form button {
-    display: block;
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
+/* Submit Button Styling */
+.form_container button {
+    width: 100%; /* Full width button */
+    background-color: #4CAF50; /* Green background for button */
+    color: white; /* White text */
+    padding: 10px; /* Add padding */
+    font-size: 16px; /* Consistent font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
-form button:hover {
-    background-color: #45a049;
+.form_container button:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
 
-/* Style for success or error messages */
-ul {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 10px;
-    list-style-type: none;
-    border-radius: 5px;
-    background-color: #e9f7e9; /* Light green background for success */
-    color: #2d7a2d;
-    border: 1px solid #c6e1c6;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Message Container Styles */
+.message_container {
+    max-width: 500px; /* Limit the width for readability */
+    margin: 20px auto; /* Center the message container on the page */
+    padding: 15px; /* Add padding inside the container */
+    list-style-type: none; /* Remove default bullet points */
+    border-radius: 8px; /* Add rounded corners */
+    background-color: #e9f7e9; /* Light green background for success messages */
+    color: #2d7a2d; /* Dark green text for messages */
+    border: 1px solid #c6e1c6; /* Subtle border for container */
+    font-family: Arial, sans-serif; /* Consistent font style */
+    font-size: 16px; /* Readable font size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
-ul li {
-    margin-bottom: 5px;
+/* Message List Item Styles */
+.message_container li {
+    margin-bottom: 10px; /* Add space between messages */
 }
 
-ul li:last-child {
-    margin-bottom:0;
-}   
+.message_container li:last-child {
+    margin-bottom: 0; /* Remove margin for the last item */
+}
+
+/* Message Variations */
+
+/* Success Message */
+.message_container.success {
+    background-color: #e9f7e9; /* Light green for success */
+    color: #2d7a2d; /* Dark green text */
+    border: 1px solid #c6e1c6; /* Green border */
+}
+
+/* Error Message */
+.message_container.error {
+    background-color: #fcebea; /* Light red for error */
+    color: #e74c3c; /* Bright red text */
+    border: 1px solid #f5c6cb; /* Red border */
+}
+
+/* Info Message */
+.message_container.info {
+    background-color: #e8f4fc; /* Light blue for info */
+    color: #3498db; /* Blue text */
+    border: 1px solid #b6d9f7; /* Blue border */
+}
+
+/* Warning Message */
+.message_container.warning {
+    background-color: #fff4e5; /* Light orange for warnings */
+    color: #e67e22; /* Orange text */
+    border: 1px solid #f5d3b3; /* Orange border */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .message_container {
+        font-size: 14px; /* Slightly smaller text for small screens */
+        padding: 10px; /* Reduce padding for smaller devices */
+    }
+}

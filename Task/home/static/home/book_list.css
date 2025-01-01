@@ -1,0 +1,56 @@
+
+
+/* Book Titles */
+.page_container {
+    font-size: 20px; /* Larger font for titles */
+    color: #2c3e50; /* Darker text color for emphasis */
+    margin: 10px 0; /* Add space between titles */
+    padding: 10px; /* Add padding for better readability */
+    background-color: #ffffff; /* White background for titles */
+    border: 1px solid #ddd; /* Subtle border around each title */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    text-align: center; /* Center-align the text */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover Effect for Book Titles */
+.page_container:hover {
+    background-color: #f0f0f0; /* Slightly darker background on hover */
+}
+
+/* Pagination Container */
+.page2_container {
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center-align pagination */
+    align-items: center; /* Vertically center-align */
+    margin-top: 20px; /* Space above pagination */
+    gap: 15px; /* Space between pagination links and text */
+    font-size: 16px; /* Consistent font size for pagination text */
+    color: #34495e; /* Neutral dark color for pagination text */
+}
+
+/* Pagination Links */
+.page2_container a {
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size for links */
+    color: #4CAF50; /* Green color for links */
+    border: 1px solid #4CAF50; /* Green border for links */
+    padding: 8px 12px; /* Padding inside links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Pagination Links */
+.page2_container a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Current Page Text */
+.page2_container span {
+    font-size: 16px; /* Font size for "Page x of y" */
+    color: #555; /* Muted gray color for non-clickable text */
+}
+
+

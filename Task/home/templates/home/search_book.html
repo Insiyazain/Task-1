@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/search_book.css' %}">
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% if books %}
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }}</li>
+        {% endfor %}
+    {% else %}
+        <li>No books found matching your search criteria.</li>
+    {% endif %}
+</ul>
+{% endblock %}

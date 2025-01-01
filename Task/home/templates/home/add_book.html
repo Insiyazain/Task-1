@@ -7,13 +7,13 @@
 
 {% block content %}
 <h1>Add a New Book</h1>
-<form method="POST">
+<form class="form_container" method="POST">
     {% csrf_token %}
     {{form.as_p}}
     <button type="submit">Add Book</button>
 </form>
 {% if messages %}
-  <ul>
+  <ul class="message_container">
     {% for message in messages %}
        <li>{{message}}</li>
     {% endfor %}
