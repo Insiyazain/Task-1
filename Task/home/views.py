@@ -3,6 +3,7 @@ from .models import Book,Loan,Member
 from .forms import Bookform,Memberform,Loanform
 from django.contrib import messages #for displaying success messages
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -53,3 +54,19 @@ def book_list(request):
    page_number=request.GET.get('page')
    page_obj=paginator.get_page(page_number)
    return render(request,'home/book_list.html',{'page_obj':page_obj})
+
+
+def filter_book(request):
+   books=Book.objects.all()
+   sort=request.GET.get('sorts')
+   if sort=='publish_date':
+      books=books.order_by('-publish_date')
+   elif sort=='copies':
+      books=books.filter(available_copies__gte=1)
+   elif sort=='same_author':
+      books=books.filter(author__iexact="Muhammad Zain")   
+   return render(request,'home/filter_book.html',{'books':books})      
+
+
+def my_view(request):
+   return render(request,'my_template.html')

@@ -1,0 +1,21 @@
+
+  /* Style the book list */
+  ul {
+    list-style-type: none;   /* Remove default bullets */
+    padding-left: 520px;         /* Remove default padding */
+    max-width: 600px;        /* Constrain width (optional) */
+  }
+  
+  li {
+    background-color: #fff;  /* White background */
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;  /* Light border */
+    border-radius: 4px;      /* Rounded corners */
+  }
+  
+  /* Optional: Add hover effect on list items */
+  li:hover {
+    background-color: #fafafa; /* Slightly lighter background on hover */
+  }
+  

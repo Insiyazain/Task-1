@@ -6,8 +6,17 @@
 {% endblock %}
 
 {% block content %}
-<h1>Books List</h1>
-
+<div class="filter_container">
+  <form method="GET" action="{% url 'filter-book' %}">
+    <select name="sorts">
+      <option value="publish_date">Newest First</option>
+      <option value="copies">Available Copies</option>
+      <option value="same_author">Same Author</option>
+    </select>    
+    <button type="submit">Filter</button>
+  </form>  
+  <h1>Books List</h1>
+</div>
 <ul>
   {% for book in books %}
   <li>

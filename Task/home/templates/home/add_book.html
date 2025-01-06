@@ -9,7 +9,7 @@
 <h1>Add a New Book</h1>
 <form class="form_container" method="POST">
     {% csrf_token %}
-    {{form.as_p}}
+    {{ form.as_p }}
     <button type="submit">Add Book</button>
 </form>
 {% if messages %}
